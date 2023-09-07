@@ -30,6 +30,15 @@ export default function Login() {
         action="/auth/sign-in"
         method="post"
       >
+        <label className="text-md" htmlFor="name">
+          Name
+        </label>
+        <input
+          className="rounded-md px-4 py-2 bg-inherit border mb-6"
+          name="name"
+          placeholder="Name"
+          required
+        />
         <label className="text-md" htmlFor="email">
           Email
         </label>
@@ -49,6 +58,16 @@ export default function Login() {
           placeholder="••••••••"
           required
         />
+        <label className="text-md" htmlFor="role">
+          Role
+        </label>
+        <select 
+          className="rounded-md px-4 py-2 bg-inherit border mb-6"
+          name="role"
+        >
+          <option value="professor">Professor</option>
+          <option value="aluno">Aluno</option>
+        </select>
         <button className="bg-green-700 rounded px-4 py-2 text-white mb-2">
           Sign In
         </button>
