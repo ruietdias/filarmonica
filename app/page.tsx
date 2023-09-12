@@ -37,7 +37,15 @@ export default async function Index() {
 
       <div className="animate-in flex flex-col gap-14 opacity-0 max-w-4xl px-3 py-16 lg:py-24 text-foreground">
         <div className="container-wrapper">
-          Content
+        {user ? (
+              <div className="flex items-center gap-4">
+                Welcome {user.user_metadata.name}!
+              </div>
+            ) : (
+              <div className="flex items-center gap-4">
+                You need to login to see the content. 
+              </div>
+            )}
         </div>
       </div>
     </div>
